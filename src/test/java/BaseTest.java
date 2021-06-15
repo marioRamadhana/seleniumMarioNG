@@ -62,19 +62,19 @@ public class BaseTest {
 
         if (result.getStatus()==ITestResult.SUCCESS){
             String methodName = result.getMethod().getMethodName();
-            String logText = "Test Case" + methodName + "PASS";
+            String logText = "Test Case " + methodName + " PASS";
             Markup m = MarkupHelper.createLabel(logText, ExtentColor.GREEN);
             logger.log(Status.PASS,m);
         }
         else if (result.getStatus()==ITestResult.FAILURE){
             String methodName = result.getMethod().getMethodName();
-            String logText = "Test Case" + methodName + "FAIL";
+            String logText = "Test Case " + methodName + " FAIL";
             Markup m = MarkupHelper.createLabel(logText, ExtentColor.RED);
             logger.log(Status.FAIL,m);
         }
         else if (result.getStatus()==ITestResult.SKIP){
             String methodName = result.getMethod().getMethodName();
-            String logText = "Test Case" + methodName + "SKIPPED";
+            String logText = "Test Case " + methodName + " SKIPPED";
             Markup m = MarkupHelper.createLabel(logText, ExtentColor.YELLOW);
             logger.log(Status.SKIP,m);
         }

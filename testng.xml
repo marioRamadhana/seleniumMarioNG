@@ -8,6 +8,7 @@
         <parameter name="browserName" value="chrome"></parameter>
         <classes>
             <class name="test.java.TestingHome"></class>
+            <class name="test.java.RegisterTestCase"></class>
         </classes>
     </test>
 </suite>

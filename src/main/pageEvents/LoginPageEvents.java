@@ -22,4 +22,9 @@ public class LoginPageEvents {
         ElementFetch elementFetch= new ElementFetch();
         elementFetch.getWebElement("CSS",LoginPageElements.btnContinue).click();
     }
+
+    public void clikBtnRegister(){
+        ElementFetch elementFetch = new ElementFetch();
+        elementFetch.getWebElement("XPATH", LoginPageElements.btnRegister).click();
+    }
 }
