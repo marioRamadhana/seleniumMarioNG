@@ -11,10 +11,12 @@ import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
 import main.utils.Constants;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.ITestResult;
 import org.testng.annotations.*;
-import org.testng.internal.TestResult;
 
 import java.io.File;
 import java.lang.reflect.Method;
@@ -26,10 +28,6 @@ public class BaseTest {
     public static ExtentReports extent;
     public static ExtentTest logger;
 
-
-
-    public static final String chromeDriver = "/usr/bin/chromedriver";
-    public static final String brwChrome = "webdiver.chrome.driver";
 
     @BeforeTest
     public void beforeTest(){
@@ -53,7 +51,7 @@ public class BaseTest {
         setUpDriver(browserName);
         driver.manage().window().maximize();
         driver.get(Constants.baseUrl);
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
     }
 
 
@@ -95,8 +93,9 @@ public class BaseTest {
             driver = new ChromeDriver();
         } else if (browserName.equalsIgnoreCase("firefox")){
         } else {
-            System.setProperty(brwChrome,chromeDriver);
+            System.setProperty("webdiver.chrome.driver","/usr/bin/chromedriver");
             driver = new ChromeDriver();
         }
     }
+
 }

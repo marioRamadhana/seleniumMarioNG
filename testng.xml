@@ -7,8 +7,9 @@
     <test name="Mario Nyoba">
         <parameter name="browserName" value="chrome"></parameter>
         <classes>
-<!--            <class name="test.java.TestingHome"></class>-->
+            <class name="test.java.TestingHome"></class>
             <class name="test.java.RegisterTestCase"></class>
+            <class name="test.java.uploadFile.updateProfil"></class>
         </classes>
     </test>
 </suite>
