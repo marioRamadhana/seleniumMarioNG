@@ -5,4 +5,7 @@ public interface LoginPageElements {
     String username = "#ap_email";
     String btnContinue = "#continue";
     String btnRegister = "//a[@id='createAccountSubmit']";
+    String password = "#ap_password";
+    String btnSignIn = "#signInSubmit";
+
 }

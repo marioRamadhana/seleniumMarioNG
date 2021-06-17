@@ -27,4 +27,14 @@ public class LoginPageEvents {
         ElementFetch elementFetch = new ElementFetch();
         elementFetch.getWebElement("XPATH", LoginPageElements.btnRegister).click();
     }
+
+    public void enterPassword(){
+        ElementFetch elementFetch = new ElementFetch();
+        elementFetch.getWebElement("CSS", LoginPageElements.password).sendKeys(Constants.password);
+    }
+
+    public void clickBtnSignin(){
+        ElementFetch elementFetch = new ElementFetch();
+        elementFetch.getWebElement("CSS", LoginPageElements.btnSignIn).click();
+    }
 }
